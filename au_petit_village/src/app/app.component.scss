@@ -3,11 +3,46 @@
 .header-main {
   display: flex;
   align-items: center;
+  height: 3rem;
 
   nav {
+    height: 100%;
+    width: 100vw;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    .croix {
+      visibility: hidden;
+
+    }
+
+    .menu {
+    }
+
+    img {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
     ul {
+      width: 100vw;
+
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10%;
+
+      background-color: #FDD90B;
+
+      li {
+        visibility: hidden;
+      }
     }
   }
+}
+
+.active {
+  visibility: visible;
 }
