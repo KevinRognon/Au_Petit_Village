@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {gsap} from "gsap";
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,15 @@ export class AppComponent {
   constructor() {
   }
 
-  menu_hamburger = document.querySelector(".menu");
 
+  isMenuActive = false;
+  ngOnInit() {
+  }
   setClass () {
+    this.isMenuActive = !this.isMenuActive;
+    this.checkActiveMenu(this.isMenuActive)
   }
 
+  checkActiveMenu (elemToCheck:boolean) {
+  }
 }

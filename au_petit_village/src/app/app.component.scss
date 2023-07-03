@@ -25,8 +25,20 @@
       position: absolute;
       right: 10px;
       top: 10px;
+      z-index: 1001;
     }
-    ul {
+
+
+    .active {
+      height: 100vh;
+
+      flex-direction: column;
+
+
+    }
+
+
+    .dropper {
       width: 100vw;
 
       display: flex;
@@ -34,15 +46,24 @@
       align-items: center;
       gap: 10%;
 
-      background-color: #FDD90B;
+      background-color: #151217;
+      color: white;
+      z-index: 1000;
 
-      li {
-        visibility: hidden;
+
+      transition: height .3s ease-in-out;
+
+
+      .lien {
+        position: relative;
+        top: -50px;
+
+        a {
+          color: inherit;
+        }
       }
     }
   }
 }
 
-.active {
-  visibility: visible;
-}
+

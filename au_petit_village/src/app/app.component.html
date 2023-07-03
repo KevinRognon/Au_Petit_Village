@@ -3,10 +3,10 @@
 <header class="header-main">
   <nav>
     <img (click)="setClass()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
-    <ul>
-      <li><a routerLink="/">Accueil</a></li>
-      <li><a routerLink="/produits">Produits</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+    <ul class="dropper" [ngClass]="{'active': isMenuActive}">
+      <li (click)="isMenuActive = false" class="lien"><a routerLink="/">Accueil</a></li>
+      <li (click)="isMenuActive = false" class="lien"><a routerLink="/produits">Produits</a></li>
+      <li (click)="isMenuActive = false" class="lien"><a routerLink="/contact">Contact</a></li>
     </ul>
   </nav>
 </header>
