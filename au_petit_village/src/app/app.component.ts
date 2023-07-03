@@ -13,8 +13,7 @@ export class AppComponent {
 
 
   isMenuActive = false;
-  ngOnInit() {
-  }
+
   setClass () {
     this.isMenuActive = !this.isMenuActive;
     this.checkActiveMenu(this.isMenuActive)

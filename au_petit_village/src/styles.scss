@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "fonts.scss";
 
 *, ::before, ::after {
     margin: 0;
@@ -12,5 +13,10 @@
 
 body {
   background-color: #F9D0A3;
+  font-family: Bubbleboddy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Comfortaa";
 }
 
