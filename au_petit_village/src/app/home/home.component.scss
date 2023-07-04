@@ -34,7 +34,7 @@
 
     .para-presentation {
       text-align: justify;
-      font-family: "Bubbleboddy-Light";
+      font-family: "OpenSans-Light";
 
 
       padding: 10px;
@@ -44,4 +44,37 @@
 
   }
 
+}
+
+.article-home {
+  .container-produit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+
+    .lien-produit {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .produit {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    width: 90%;
+    margin: 0;
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }

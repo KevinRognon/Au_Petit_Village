@@ -23,8 +23,17 @@
   <article class="article-home">
     <h2>Nos produits</h2>
 
-    <div *ngFor="">
+    <div class="container-produit">
+        <div class="produit" *ngFor="let produit of produits">
 
+          <a class="lien-produit" [routerLink]="['/product', produit.id]">
+            <img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}">
+            <h3>{{ produit.product_name }}</h3>
+            <p>{{produit.product_desc}}</p>
+            <p>Prix: <strong>{{produit.product_price}}€</strong></p>
+          </a>
+
+        </div>
     </div>
   </article>
 
