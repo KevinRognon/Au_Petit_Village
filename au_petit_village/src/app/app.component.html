@@ -1,12 +1,11 @@
 
 
 <header class="header-main">
-<!--    <img class="logo-nav" src="./assets/images/Logo_au%20petit%20village.jpg" alt="logo au petit village">-->
   <nav>
     <img (click)="setClass()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
     <ul class="dropper" [ngClass]="{'active': isMenuActive}">
       <li (click)="isMenuActive = false" class="lien"><a routerLink="/">Accueil</a></li>
-      <li (click)="isMenuActive = false" class="lien"><a routerLink="/produits">Produits</a></li>
+<!--    <img class="logo-nav" src="./assets/images/Logo_au%20petit%20village.jpg" alt="logo au petit village">-->
       <li (click)="isMenuActive = false" class="lien"><a routerLink="/contact">Contact</a></li>
     </ul>
   </nav>
