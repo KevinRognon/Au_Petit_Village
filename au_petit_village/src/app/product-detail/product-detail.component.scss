@@ -10,13 +10,20 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+
+    border-radius: 5px;
 
     gap: 1rem;
 
     background-color: white;
     width: 90%;
     padding: 20px;
+
+    li {
+      span {
+        text-decoration: underline;
+      }
+    }
     img {
       width: 90%;
     }
