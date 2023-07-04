@@ -1,6 +1,7 @@
 
 
 <header class="header-main">
+<!--    <img class="logo-nav" src="./assets/images/Logo_au%20petit%20village.jpg" alt="logo au petit village">-->
   <nav>
     <img (click)="setClass()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
     <ul class="dropper" [ngClass]="{'active': isMenuActive}">
@@ -14,3 +15,19 @@
 <main>
   <router-outlet></router-outlet>
 </main>
+
+
+<footer>
+  <div class="container-footer">
+    <h2>Nos réseaux sociaux</h2>
+    <hr>
+    <div class="container-footer-img">
+      <a target="_blank" href="http://facebook.com/"><img src="./assets/images/facebook.png" alt="facebook"></a>
+      <a target="_blank" href="http://twitter.com/"><img src="./assets/images/twitter.png" alt="twitter"></a>
+    </div>
+  </div>
+  <small>
+    Copyrights "Au Petit Village" <br>
+    Designed by K.ROGNON.
+  </small>
+</footer>
