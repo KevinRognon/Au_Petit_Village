@@ -6,7 +6,7 @@ import {ProductDetailComponent} from "./product-detail/product-detail.component"
 
 const routes: Routes = [
   {path: "", component: HomeComponent},
-  {path: "products/:id", component: ProductDetailComponent},
+  {path: "product/:id", component: ProductDetailComponent},
   {path: "contact", component: ContactComponent},
 ];
 
