@@ -33,13 +33,7 @@
     }
 
 
-    .active {
-      height: 100vh;
 
-      flex-direction: column;
-
-
-    }
 
 
     .dropper {
@@ -67,7 +61,20 @@
         }
       }
     }
+    .active {
+      height: 100vh;
+
+      flex-direction: column;
+
+
+
+
+    }
   }
+}
+
+body.menu-active {
+  overflow: hidden;
 }
 
 footer {
