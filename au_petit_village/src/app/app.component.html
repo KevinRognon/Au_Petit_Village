@@ -1,18 +1,39 @@
 
 
 <header class="header-main">
-  <img src="" alt="">
+
   <nav>
     <img (click)="setClass()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
-    <ul class="dropper" [ngClass]="{'active': isMenuActive}">
+    <ul class="dropper" >
+      <div class="container-logo-menu">
+        <a routerLink="/">
+          <img class="logo-menu" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
+        </a>
+      </div>
       <li (click)="isMenuActive = false" class="lien"><a routerLink="/">Accueil</a></li>
 <!--    <img class="logo-nav" src="./assets/images/Logo_au%20petit%20village.jpg" alt="logo au petit village">-->
       <li (click)="isMenuActive = false" class="lien"><a routerLink="/contact">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<main [ngClass]="{'menu-active' : isMenuActive}">
+
+</header>
+<!--OVERLAY RESPONSIVE DU MENU-->
+<div [ngClass]="{'active-menu' : isMenuActive}" class="overlay-menu">
+  <img (click)="setClass()" class="hamburger-overlay" src="./assets/images/croix.png" alt="menu hamburger">
+  <nav class="liens-menu-overlay">
+    <ul>
+      <a routerLink="/">
+        <img (click)="isMenuActive = false" class="logo-menu" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
+      </a>
+      <li (click)="isMenuActive = false"><a routerLink="/apropos">A propos</a></li>
+      <li (click)="isMenuActive = false"><a routerLink="/contact">Nous contacter</a></li>
+    </ul>
+  </nav>
+</div>
+<!--OVERLAY RESPONSIVE DU MENU-->
+
+<main>
   <router-outlet></router-outlet>
 </main>
 

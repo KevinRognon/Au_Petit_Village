@@ -1,4 +1,54 @@
 
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  z-index: 5000;
+
+  height: calc(100vh / 2);
+  width: calc(100vw / 2);
+  background-color: #151217;
+  border-bottom-left-radius: 5px;
+  transition: all .3s ease;
+
+  .liens-menu-overlay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100%;
+    overflow: hidden;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+
+      margin-top: calc(100% / 3);
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      img {
+        width: 100px;
+      }
+    }
+
+  }
+}
+.active-menu {
+  right: 0;
+}
+
+.hamburger-overlay {
+  position: absolute;
+  right: calc((100vw / 2) / 4);
+  top: 10px;
+
+}
 
 .header-main {
   display: flex;
@@ -10,10 +60,6 @@
   margin-bottom: 10%;
   border-bottom: 2px solid #DA001E;
 
-  .logo-nav {
-    width: 150px;
-  }
-
   nav {
     height: 100%;
     width: 100vw;
@@ -22,17 +68,12 @@
     display: flex;
     justify-content: center;
 
-
     .menu {
       position: absolute;
-      right: 10px;
+      right: calc((100vw / 2) / 2 / 2);
       top: 10px;
       z-index: 1001;
     }
-
-
-
-
 
     .dropper {
       width: 100%;
@@ -49,6 +90,19 @@
 
       transition: height .3s ease-in-out;
 
+      .container-logo-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo-menu {
+          width: 35px;
+        }
+
+        .active-img-big {
+          width: 100px;
+        }
+      }
 
       .lien {
         position: relative;
@@ -63,16 +117,17 @@
       height: 100vh;
 
       flex-direction: column;
+      gap: 2%;
+
+      .logo-menu {
+        margin-bottom: 50px;
+      }
 
 
 
 
     }
   }
-}
-
-body.menu-active {
-  overflow: hidden;
 }
 
 footer {
@@ -126,16 +181,21 @@ footer {
 
 @media screen and (min-width: 480px){
 
-  .menu {
-    display: none;
-  }
+  .overlay-menu {
+    ul {
 
-  .header-main nav .dropper {
+      font-size: 1.5em;
 
-    justify-content: space-evenly;
-    .lien {
-      top: 0 !important;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .logo-menu {
+        width: 200px !important;
+      }
     }
   }
+
 }
 
