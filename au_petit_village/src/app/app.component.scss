@@ -3,8 +3,9 @@
 .header-main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
   height: 3rem;
+  width: 100vw;
 
   margin-bottom: 10%;
   border-bottom: 2px solid #DA001E;
@@ -23,9 +24,6 @@
 
 
     .menu {
-    }
-
-    img {
       position: absolute;
       right: 10px;
       top: 10px;
@@ -124,4 +122,20 @@ footer {
   }
 }
 
+// Media queries
+
+@media screen and (min-width: 480px){
+
+  .menu {
+    display: none;
+  }
+
+  .header-main nav .dropper {
+
+    justify-content: space-evenly;
+    .lien {
+      top: 0 !important;
+    }
+  }
+}
 
