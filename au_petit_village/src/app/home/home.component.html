@@ -21,11 +21,18 @@
   <hr class="sep" >
 
   <article class="article-home">
+
     <div class="firstdiv-article-home">
       <h2>Nos produits</h2>
       <input [(ngModel)]="searchText" (input)="filterProduits()" placeholder="Rechercher un produit">
-      <p *ngIf="responseText === 'Aucun produit correspondant' && filteredProduits.length === 0">Aucun produit correspondant</p>
+      <select>
+        <option selected value="croissant">↑ Prix ↑</option>
+        <option value="decroissant">↓ Prix ↓</option>
+      </select>
+      <p *ngIf="responseText === 'Aucun produit correspondant' && filteredProduits.length === 0">{{responseText}}</p>
     </div>
+
+
     <div class="container-produit">
       <div class="produit" *ngFor="let produit of filteredProduits">
 

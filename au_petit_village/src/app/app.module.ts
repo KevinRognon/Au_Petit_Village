@@ -7,13 +7,17 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import {FormsModule} from "@angular/forms";
+import { PrixcroissantPipe } from './prixcroissant.pipe';
+import { PrixdecroissantPipe } from './prixdecroissant.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PrixcroissantPipe,
+    PrixdecroissantPipe
   ],
     imports: [
         BrowserModule,

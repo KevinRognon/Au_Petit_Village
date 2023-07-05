@@ -48,8 +48,19 @@
 
 .article-home {
   text-align: center;
+  position: relative;
 
   .firstdiv-article-home {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    select {
+      border: none;
+      outline: 1px solid black;
+      border-radius: 5px;
+      text-align: center;
+    }
     input {
       padding: 5px;
       border: none;
