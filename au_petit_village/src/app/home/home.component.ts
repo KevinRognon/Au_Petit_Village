@@ -8,10 +8,20 @@ import {ProductsService} from "../products.service";
 export class HomeComponent implements OnInit{
 
   produits: any[] = [];
+  searchText = '';
+  filteredProduits : any[] = [];
   constructor(private productsService: ProductsService) {
   }
 
-  ngOnInit() {
-    this.produits = this.productsService.dataProducts;
+  filterProduits() {
+    this.filteredProduits = this.produits.filter(produit => {
+      return produit.product_name.toLowerCase().includes(this.searchText.toLowerCase());
+    })
   }
+
+  ngOnInit() {
+    this.produits = this.productsService.dataProducts
+    this.filterProduits();
+  }
+
 }

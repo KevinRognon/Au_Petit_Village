@@ -21,10 +21,12 @@
   <hr class="sep" >
 
   <article class="article-home">
-    <h2>Nos produits</h2>
-
+    <div class="firstdiv-article-home">
+      <h2>Nos produits</h2>
+      <input [(ngModel)]="searchText" (input)="filterProduits()" placeholder="Rechercher un produit">
+    </div>
     <div class="container-produit">
-        <div class="produit" *ngFor="let produit of produits">
+        <div class="produit" *ngFor="let produit of filteredProduits">
 
           <a class="lien-produit" [routerLink]="['/product', produit.id]">
             <img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}">
