@@ -1,11 +1,11 @@
 <!--OVERLAY RESPONSIVE DU MENU-->
-<div [ngClass]="{'active-menu' : isMenuActive}" class="overlay-menu">
-  <img (click)="setClass()" class="croix-overlay" src="./assets/images/croix.png" alt="menu hamburger">
+<div class="overlay-menu">
+  <img (click)="activeAnimation()" class="croix-overlay" src="./assets/images/croix.png" alt="menu hamburger">
   <nav class="liens-menu-overlay">
+    <a routerLink="/">
+      <img class="logo-site-overlay" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
+    </a>
     <ul>
-      <a routerLink="/">
-        <img (click)="isMenuActive = false" class="logo-menu" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
-      </a>
       <li (click)="isMenuActive = false"><a routerLink="/apropos">A propos</a></li>
       <li (click)="isMenuActive = false"><a routerLink="/contact">Nous contacter</a></li>
     </ul>
@@ -14,19 +14,13 @@
 <!--OVERLAY RESPONSIVE DU MENU-->
 
 <header class="header-main">
-
-  <nav>
-    <img (click)="setClass()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
-    <ul class="dropper" >
-      <div class="container-logo-menu">
-        <a routerLink="/">
-          <img class="logo-menu" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
-        </a>
-      </div>
-      <li (click)="isMenuActive = false" class="lien"><a routerLink="/">Accueil</a></li>
-      <li (click)="isMenuActive = false" class="lien"><a routerLink="/contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div>
+    <a routerLink="/">
+      <img class="logo-site" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
+    </a>
+  <h1>Au Petit Village</h1>
+  </div>
+  <img (click)="activeAnimation()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
 
 </header>
 

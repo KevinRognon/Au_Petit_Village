@@ -1,132 +1,96 @@
-
+// OVERLAY
 .overlay-menu {
   position: fixed;
   top: 0;
   right: -100vw;
   z-index: 5000;
+  opacity: 0;
 
-  height: 308px;
-  width: 163px;
+
+  height: 100vh;
+  width: 100vw;
   background-color: #151217;
   border-bottom-left-radius: 5px;
   transition: all .3s ease;
 
+  .croix-overlay {
+    margin: 10px 0 0 10px;
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
   .liens-menu-overlay {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    gap: 5rem;
 
     height: 100%;
     overflow: hidden;
+
+    font-size: 2em;
+
+    .logo-site-overlay {
+      width: calc(100vw / 2);
+      justify-self: flex-start;
+      margin-top: 3rem;
+    }
+
     ul {
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
 
-      margin-top: calc(100% / 3);
-      text-align: center;
 
       a {
         text-decoration: none;
         color: white;
       }
-      img {
-        width: 100px;
-      }
     }
 
   }
 }
-.active-menu {
-  right: 0;
-}
 
-.hamburger-overlay {
-  position: absolute;
-  right: calc((100vw / 2) / 4);
-  top: 10px;
+// OVERLAY END ================+++++++++++++++++====================
 
-}
 
 .header-main {
   display: flex;
   align-items: center;
-  //justify-content: center;
-  height: 3rem;
-  width: 100vw;
+  justify-content: space-between;
+  gap: 10px;
 
-  margin-bottom: 10%;
+  height: 4rem;
+  width: 100%;
+
+  margin-bottom: 30px;
+  padding: 0 20px;
+
   border-bottom: 2px solid #DA001E;
+  background-color: #151217;
 
-  nav {
-    height: 100%;
-    width: 100vw;
-    position: relative;
 
+  div {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-    .menu {
-      position: absolute;
-      right: calc((100vw / 2) / 2 / 2);
-      top: 10px;
-      z-index: 1001;
-    }
-
-    .dropper {
-      width: 100%;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10%;
-
-      background-color: #151217;
+    h1 {
       color: white;
-      z-index: 1000;
-
-
-      transition: height .3s ease-in-out;
-
-      .container-logo-menu {
-
-        .logo-menu {
-          width: 35px;
-
-        }
-
-        .active-img-big {
-          width: 100px;
-        }
-      }
-
-      .lien {
-        position: relative;
-        top: -50px;
-
-        a {
-          color: inherit;
-        }
-      }
+      font-size: .8em;
     }
-    .active {
-      height: 100vh;
-
-      flex-direction: column;
-      gap: 2%;
-
-      .logo-menu {
-        margin-bottom: 50px;
-      }
-
-
-
-
+    .logo-site {
+      width: 40px;
     }
   }
+
 }
+
+
+// FOOTER
 
 footer {
   margin-top: 10%;
@@ -177,44 +141,29 @@ footer {
 
 // Media queries
 
+// Tablettes
 @media screen and (min-width: 480px){
 
-  .overlay-menu {
-    width: 220px !important;
-    height: 450px !important;
-    ul {
+  .header-main {
+    height: 6rem !important;
 
-      font-size: 1.5em;
 
-      a {
-        color: white;
-        text-decoration: none;
+    div {
+      h1 {
+        font-size: 1.4em;
       }
-
-      .logo-menu {
-        width: 200px !important;
+      .logo-site {
+        width: 50px;
       }
-    }
-  }
-
-  .dropper {
-    justify-content: flex-start !important;
-    .container-logo-menu {
-      margin-left: calc((100vw / 2) / 4);
     }
   }
 
 }
 
+// PC
 @media screen and (min-width: 1024px) {
-  header {
-    width: 100% !important;
-  }
 
-  .overlay-menu {
-    ul.dropper {
-      width: 100% !important;
-    }
-  }
+
+
 }
 
