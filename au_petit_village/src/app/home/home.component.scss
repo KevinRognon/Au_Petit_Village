@@ -20,6 +20,7 @@
 
     width: 90%;
     padding: 15px;
+    box-shadow: 0 0 3px #c2a814;
 
 
 
@@ -54,20 +55,20 @@
   .firstdiv-article-home {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 5px;
 
-    select {
-      border: none;
-      outline: 1px solid black;
-      border-radius: 5px;
-      text-align: center;
-    }
     input {
       padding: 5px;
       border: none;
-      outline: 2px solid black;
+      outline: none;
       border-radius: 5px;
-      text-align: center;
+      box-shadow: 0 0 3px #bdbdbd;
+    }
+    select {
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      box-shadow: 0 0 3px #bdbdbd;
     }
   }
 

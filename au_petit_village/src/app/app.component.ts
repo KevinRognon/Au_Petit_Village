@@ -20,23 +20,19 @@ export class AppComponent {
     this.isMenuActive = !this.isMenuActive;
     this.checkActiveMenu(this.isMenuActive)
   }
-
+  //
   checkActiveMenu (elemToCheck:boolean) {
 
     if (elemToCheck) {
-      gsap.to('.overlay-menu',
+      gsap.to('.menu div',
         {
-          right: 0,
-          duration: .1,
-          opacity: 100
+          visibility: "visible",
         })
     }
     else {
-      gsap.to('.overlay-menu',
+      gsap.to('.menu div',
         {
-          right: "-100vw",
-          duration: .1,
-          opacity: 0
+          visibility: "hidden",
         })
     }
   }

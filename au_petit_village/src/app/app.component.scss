@@ -73,7 +73,9 @@
   background-color: #151217;
 
 
-  div {
+  overflow-x: hidden;
+
+  .header-logo {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -84,6 +86,39 @@
     }
     .logo-site {
       width: 40px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+
+
+    .menu-hamburger-croix {
+      display: none;
+    }
+
+    img {
+      width: 25px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+
+
+      position: absolute;
+      top: 4rem;
+      right: 0;
+
+      padding: 15px;
+
+      visibility: hidden;
+      background-color: black;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 

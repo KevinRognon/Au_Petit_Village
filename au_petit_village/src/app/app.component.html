@@ -1,26 +1,33 @@
 <!--OVERLAY RESPONSIVE DU MENU-->
-<div class="overlay-menu">
-  <img (click)="activeAnimation()" class="croix-overlay" src="./assets/images/croix.png" alt="menu hamburger">
-  <nav class="liens-menu-overlay">
-    <a routerLink="/">
-      <img (click)="isMenuActive = false"  (click)="checkActiveMenu(isMenuActive)" class="logo-site-overlay" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
-    </a>
-    <ul>
-      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/a-propos">A propos</a></li>
-      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/contact">Nous contacter</a></li>
-    </ul>
-  </nav>
-</div>
+<!--<div class="overlay-menu">-->
+<!--  <img (click)="activeAnimation()" class="croix-overlay" src="./assets/images/croix.png" alt="menu hamburger">-->
+<!--  <nav class="liens-menu-overlay">-->
+<!--    <a routerLink="/">-->
+<!--      <img (click)="isMenuActive = false"  (click)="checkActiveMenu(isMenuActive)" class="logo-site-overlay" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">-->
+<!--    </a>-->
+<!--    <ul>-->
+<!--      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/a-propos">A propos</a></li>-->
+<!--      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/contact">Nous contacter</a></li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--</div>-->
 <!--OVERLAY RESPONSIVE DU MENU-->
 
 <header class="header-main">
-  <div>
+  <div class="header-logo">
     <a routerLink="/">
       <img class="logo-site" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
     </a>
   <h1>Au Petit Village</h1>
   </div>
-  <img (click)="activeAnimation()" class="menu" src="./assets/images/menu-burger.png" alt="menu hamburger">
+  <ul class="menu">
+    <img (click)="isMenuActive = false" (click)="activeAnimation()"class="menu-hamburger" src="./assets/images/menu-burger.png" alt="menu hamburger">
+    <img (click)="isMenuActive = false" (click)="activeAnimation()" class="menu-hamburger-croix" src="./assets/images/croix.png" alt="menu hamburger">
+    <div>
+      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)" ><a routerLink="/a-propos">A propos</a></li>
+      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/contact">Nous contacter</a></li>
+    </div>
+  </ul>
 
 </header>
 
