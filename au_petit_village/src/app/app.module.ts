@@ -10,6 +10,7 @@ import {FormsModule} from "@angular/forms";
 import { PrixcroissantPipe } from './prixcroissant.pipe';
 import { PrixdecroissantPipe } from './prixdecroissant.pipe';
 import { TriProduitsPipe } from './tri-produits.pipe';
+import { AproposComponent } from './apropos/apropos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TriProduitsPipe } from './tri-produits.pipe';
     ProductDetailComponent,
     PrixcroissantPipe,
     PrixdecroissantPipe,
-    TriProduitsPipe
+    TriProduitsPipe,
+    AproposComponent
   ],
     imports: [
         BrowserModule,
