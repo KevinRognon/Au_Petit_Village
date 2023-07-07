@@ -55,15 +55,19 @@
           outline: none;
           width: 100%;
           padding: 10px;
-          border-radius: 5px;
           border: none;
+          border-bottom: 1px solid rgba(189, 189, 189, 0.58);
           color: rgba(112, 112, 112, 0.86);
 
-          box-shadow: 0 0 3px #bdbdbd;
 
           &::placeholder {
-            color: rgba(112, 112, 112, 0.52);
+            color: rgba(112, 112, 112, 0.91);
           }
+        }
+        textarea {
+          border: none;
+          resize: none;
+          box-shadow: 0 0 3px #bdbdbd;
         }
 
         button {
