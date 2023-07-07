@@ -3,11 +3,11 @@
   <img (click)="activeAnimation()" class="croix-overlay" src="./assets/images/croix.png" alt="menu hamburger">
   <nav class="liens-menu-overlay">
     <a routerLink="/">
-      <img class="logo-site-overlay" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
+      <img (click)="isMenuActive = false"  (click)="checkActiveMenu(isMenuActive)" class="logo-site-overlay" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
     </a>
     <ul>
-      <li (click)="isMenuActive = false"><a routerLink="/apropos">A propos</a></li>
-      <li (click)="isMenuActive = false"><a routerLink="/contact">Nous contacter</a></li>
+      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/apropos">A propos</a></li>
+      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/contact">Nous contacter</a></li>
     </ul>
   </nav>
 </div>

@@ -9,6 +9,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import {FormsModule} from "@angular/forms";
 import { PrixcroissantPipe } from './prixcroissant.pipe';
 import { PrixdecroissantPipe } from './prixdecroissant.pipe';
+import { TriProduitsPipe } from './tri-produits.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PrixdecroissantPipe } from './prixdecroissant.pipe';
     ContactComponent,
     ProductDetailComponent,
     PrixcroissantPipe,
-    PrixdecroissantPipe
+    PrixdecroissantPipe,
+    TriProduitsPipe
   ],
     imports: [
         BrowserModule,

@@ -8,6 +8,8 @@ import gsap from 'gsap';
 })
 export class AppComponent {
 
+
+
   constructor() {
   }
 
@@ -16,7 +18,12 @@ export class AppComponent {
 
   activeAnimation () {
     this.isMenuActive = !this.isMenuActive;
-    if (this.isMenuActive) {
+    this.checkActiveMenu(this.isMenuActive)
+  }
+
+  checkActiveMenu (elemToCheck:boolean) {
+
+    if (elemToCheck) {
       gsap.to('.overlay-menu',
         {
           right: 0,
@@ -32,8 +39,5 @@ export class AppComponent {
           opacity: 0
         })
     }
-  }
-
-  checkActiveMenu (elemToCheck:boolean) {
   }
 }

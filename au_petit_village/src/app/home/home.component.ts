@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
+import { TriProduitsPipe } from '../tri-produits.pipe';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
   searchText = '';
   filteredProduits: any[] = [];
   responseText: string = ''; // Modifiez le type de la variable
+  selectedSortOption: string = "prix-decroissant";
 
   constructor(private productsService: ProductsService) {}
 
@@ -31,5 +33,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.produits = this.productsService.dataProducts;
     this.filterProduits();
+  }
+
+  onSortOptionChanged() {
+
   }
 }

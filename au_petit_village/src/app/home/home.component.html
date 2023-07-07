@@ -25,16 +25,17 @@
     <div class="firstdiv-article-home">
       <h2>Nos produits</h2>
       <input [(ngModel)]="searchText" (input)="filterProduits()" placeholder="Rechercher un produit">
-      <select>
-        <option selected value="croissant">↑ Prix ↑</option>
-        <option value="decroissant">↓ Prix ↓</option>
+
+      <select [(ngModel)]='selectedSortOption' >
+        <option selected value="prix-croissant">Prix croissant</option>
+        <option value="prix-decroissant">Prix décroissant</option>
       </select>
       <p *ngIf="responseText === 'Aucun produit correspondant' && filteredProduits.length === 0">{{responseText}}</p>
     </div>
 
 
     <div class="container-produit">
-      <div class="produit" *ngFor="let produit of filteredProduits">
+      <div class="produit" *ngFor="let produit of filteredProduits | triProduits:selectedSortOption">
 
         <a class="lien-produit" [routerLink]="['/product', produit.id]">
           <img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}">
