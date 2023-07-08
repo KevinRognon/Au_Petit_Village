@@ -61,7 +61,7 @@
       padding: 15px;
 
       visibility: hidden;
-      background-color: black;
+      background-color: #151217;
 
       a {
         text-decoration: none;
@@ -144,9 +144,14 @@ footer {
 }
 
 // PC
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 480px) {
+  .header-main {
+    font-size: 1.5em;
 
-
-
+    .menu div {
+      gap: 1rem;
+      top: 6rem;
+    }
+  }
 }
 
