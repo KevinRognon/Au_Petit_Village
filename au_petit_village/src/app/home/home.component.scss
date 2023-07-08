@@ -145,10 +145,24 @@
 }
 
 @media screen and (min-width: 1024px){
+
+  .article-home {
+
+    font-size: 1.4em;
+
+    .firstdiv-article-home {
+
+      font-size: 1.4em;
+
+      input, select {
+        font-size: .8em;
+      }
+    }
+  }
   .courte-pres-home {
     flex-direction: row !important;
     justify-content: center !important;
-    gap: 10rem !important;
+    gap:5rem !important;
     width: 100% !important;
     margin-bottom: 30px !important;
 
@@ -158,7 +172,7 @@
     }
 
     .para-presentation {
-      width: 900px !important;
+      width: 90% !important;
     }
   }
 }
