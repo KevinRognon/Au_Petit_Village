@@ -143,3 +143,22 @@
     }
   }
 }
+
+@media screen and (min-width: 1024px){
+  .courte-pres-home {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 10rem !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+
+
+    .image-presentation {
+      width: 500px !important;
+    }
+
+    .para-presentation {
+      width: 900px !important;
+    }
+  }
+}
