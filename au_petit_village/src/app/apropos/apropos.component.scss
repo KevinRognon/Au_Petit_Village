@@ -10,9 +10,6 @@
       align-items: center;
       gap: 20px;
 
-
-      background-color: #ffffff;
-      box-shadow: 0 0 10px #d9ba97;
       border-radius: 5px;
 
       padding: 15px;
@@ -34,15 +31,46 @@
         justify-content: center;
         align-items: center;
 
-        gap: 30px;
+        gap: 2rem;
 
         div {
           display: flex;
           flex-direction: column;
           gap: 5px;
+
+          background-color: #ffffff;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 0 4px #be9d79;
+          h2 {
+            font-weight: lighter !important;
+            font-size: 1.3em !important;
+          }
         }
       }
+
+
     }
 
+}
+
+// MEDIA QUERIES
+
+@media screen and (min-width: 1024px){
+
+  .article-propos {
+    h1 {
+      font-size: 1.6em;
+    }
+  }
+  .contenu {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+
+    div {
+      flex-basis: 33% !important;
+    }
+  }
 }
 
