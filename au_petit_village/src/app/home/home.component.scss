@@ -146,7 +146,14 @@
 
 @media screen and (min-width: 1024px){
 
+  .section-home {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   .article-home {
+    flex-basis: 45% !important;
+    min-height: 1052px !important;
 
     font-size: 1.4em;
 
@@ -155,12 +162,11 @@
       font-size: 1.4em;
 
       input, select {
-        font-size: .8em;
+        font-size: .6em;
       }
     }
   }
   .courte-pres-home {
-    flex-direction: row !important;
     justify-content: center !important;
     gap:5rem !important;
     width: 100% !important;

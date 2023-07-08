@@ -144,13 +144,33 @@ footer {
 }
 
 // PC
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1024px) {
   .header-main {
     font-size: 1.5em;
 
     .menu div {
       gap: 1rem;
       top: 6rem;
+    }
+
+    .header-logo {
+      a img {
+        width: 80px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 2%;
+    font-size: 1.2em !important;
+
+    .container-footer {
+      img {
+        width: 25px;
+      }
     }
   }
 }
