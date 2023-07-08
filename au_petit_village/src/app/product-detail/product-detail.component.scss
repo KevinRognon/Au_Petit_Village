@@ -1,0 +1,50 @@
+
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    gap: 1rem;
+
+    background-color: white;
+    width: 90%;
+    padding: 20px;
+
+    li {
+      span {
+        text-decoration: underline;
+      }
+    }
+    img {
+      width: 90%;
+    }
+    .bouton {
+      padding: 10px 20px;
+      background-color: #FDD90B;
+      color: black;
+      border: none;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .bouton:hover {
+      background-color: #ffcc00;
+    }
+
+    .bouton:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #ffcc00;
+    }
+  }
+
+}

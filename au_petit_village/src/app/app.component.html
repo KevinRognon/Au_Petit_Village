@@ -1,0 +1,39 @@
+
+<header class="header-main">
+  <div class="header-logo">
+    <a routerLink="/">
+      <img class="logo-site" src="../assets/images/Logo_au%20petit%20village.png" alt="Logo du site">
+    </a>
+  <h1><a routerLink="/">Au Petit Village</a></h1>
+  </div>
+  <ul class="menu">
+    <img (click)="activeAnimation()" *ngIf="!isMenuActive" class="menu-hamburger" src="./assets/images/menu-burger.png" alt="menu hamburger">
+    <img (click)="activeAnimation()" *ngIf="isMenuActive" class="menu-hamburger croix" src="./assets/images/croix.png" alt="menu hamburger">
+    <div>
+      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)" ><a routerLink="/a-propos">A propos</a></li>
+      <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/contact">Nous contacter</a></li>
+    </div>
+  </ul>
+
+</header>
+
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+
+<footer>
+  <div class="container-footer">
+    <h2>Nos réseaux sociaux</h2>
+    <hr>
+    <div class="container-footer-img">
+      <a target="_blank" href="http://facebook.com/"><img src="./assets/images/facebook.png" alt="facebook"></a>
+      <a target="_blank" href="http://twitter.com/"><img src="./assets/images/twitter.png" alt="twitter"></a>
+    </div>
+  </div>
+  <small>
+    Copyrights "Au Petit Village" <br>
+    Designed by K.ROGNON
+  </small>
+</footer>
