@@ -129,8 +129,18 @@ footer {
 
   .header-main {
     height: 6rem !important;
-
-
+    .menu div {
+      gap: 2rem;
+      top: 6rem;
+    }
+    .header-logo {
+      a img {
+        width: 80px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+    }
     div {
       h1 {
         font-size: 1.4em;
