@@ -50,6 +50,33 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      a {
+        text-decoration: none;
+        background-image: url("../assets/images/panier.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+
+        position: relative;
+
+
+
+        .nb-items-panier {
+          position: absolute;
+          top: 13px;
+          right: -4px;
+          color: black;
+          background-color: white;
+          width: 16px;
+          height: 16px;
+          font-size: .5em;
+          text-align: center;
+          border-radius: 50%;
+        }
+      }
+
+
     }
     .croix {
       width: 20px;

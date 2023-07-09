@@ -8,7 +8,7 @@
   </div>
   <ul class="menu">
     <div class="logo-nav">
-      <a routerLink="/panier"><img src="../assets/images/panier.png" alt="panier logo"></a>
+      <a routerLink="/panier"><span class="nb-items-panier">{{nbItems}}</span></a>
       <img (click)="activeAnimation()" *ngIf="!isMenuActive" class="menu-hamburger" src="./assets/images/menu-burger.png" alt="menu hamburger">
       <img (click)="activeAnimation()" *ngIf="isMenuActive" class="menu-hamburger croix" src="./assets/images/croix.png" alt="menu hamburger">
     </div>

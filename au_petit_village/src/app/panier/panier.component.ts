@@ -21,8 +21,8 @@ export class PanierComponent implements OnInit, OnChanges{
 
   ngOnInit() {
     this.loadPanier();
-    console.log(this.panier)
   }
+
 
   ngOnChanges(changes: SimpleChanges) {
     this.loadPanier();
