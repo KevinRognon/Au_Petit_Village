@@ -9,13 +9,13 @@ import {PanierService} from "./panier.service";
 })
 export class AppComponent implements OnInit{
 
-public nbItems : number = 0;
+public nbItems : number;
 
   constructor(public panierComponent: PanierService ) {
   }
 
   ngOnInit() {
-    this.nbItems += this.panierComponent.items.length;
+    this.nbItems = this.panierComponent.items.length;
   }
 
   isMenuActive = false;
