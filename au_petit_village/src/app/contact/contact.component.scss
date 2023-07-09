@@ -69,10 +69,22 @@
           border: none;
           padding: 10px;
           background-color: #FDD90B;
-          border-radius: 7px;
+          border-radius: 5px;
+          width: 100%;
         }
 
       }
     }
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (min-width: 1024px) {
+  .section-contact {
+    height: 80vh !important;
+  }
+  .article-contact {
+    max-width: 800px !important;
   }
 }
