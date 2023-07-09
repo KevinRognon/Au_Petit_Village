@@ -23,7 +23,7 @@ import { PanierComponent } from './panier/panier.component';
     PrixdecroissantPipe,
     TriProduitsPipe,
     AproposComponent,
-    PanierComponent
+    PanierComponent,
   ],
     imports: [
         BrowserModule,

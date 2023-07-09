@@ -39,6 +39,11 @@
   .menu {
     display: flex;
     flex-direction: column;
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
 
     .logo-nav {

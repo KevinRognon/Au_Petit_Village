@@ -24,13 +24,13 @@ export class AppComponent {
   checkActiveMenu (elemToCheck:boolean) {
 
     if (elemToCheck) {
-      gsap.to('.menu div',
+      gsap.to('.menu .text-nav',
         {
           visibility: "visible",
         })
     }
     else {
-      gsap.to('.menu div',
+      gsap.to('.menu .text-nav',
         {
           visibility: "hidden",
         })

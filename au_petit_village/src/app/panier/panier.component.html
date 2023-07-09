@@ -1,1 +1,40 @@
-<p>panier works!</p>
+
+
+
+
+
+<section class="section-panier">
+
+  <article class="article-panier" *ngIf="panierOk">
+
+    <div class="conteneur-items" *ngFor="let item of panier">
+
+      <div class="card-item">
+        <img class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
+        <img src={{item.product_img}} alt={{item.product_name}}>
+        <div class="infos-produit">
+          <p><span class="gras">{{item.product_name}}</span></p>
+          <p><span class="desc_produit">{{item.product_desc}}</span></p>
+        </div>
+        <div>
+          <p>{{item.product_price}}€</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="infos-paiement">
+      <div>
+        <p><span class="gras">Total: </span>{{somme}}€</p>
+      </div>
+    </div>
+
+  </article>
+
+  <article *ngIf="!panierOk">
+    <div>
+      <h1>Panier vide</h1>
+    </div>
+  </article>
+
+</section>

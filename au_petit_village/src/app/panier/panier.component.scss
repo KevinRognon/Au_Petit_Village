@@ -1,0 +1,47 @@
+
+
+.section-panier {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .article-panier {
+    background-color: white;
+    width: 90%;
+
+    .conteneur-items {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      .card-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+
+        padding: 10px;
+
+        .croix_blanche {
+          background-color: red;;
+          width: 16px;
+          padding: 5px;
+          border-radius: 50%;
+        }
+
+        .gras {
+          font-weight: bold;
+        }
+
+        .desc_produit {
+          font-size: .8em;
+        }
+
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
