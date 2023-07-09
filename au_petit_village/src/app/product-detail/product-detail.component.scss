@@ -6,6 +6,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 80vh;
   article {
     display: flex;
     flex-direction: column;
@@ -13,17 +14,22 @@ section {
 
     border-radius: 5px;
 
-    gap: 1rem;
+    gap: 2rem;
 
     background-color: white;
     width: 90%;
     padding: 20px;
 
-    li {
-      span {
-        text-decoration: underline;
-      }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
     }
+    span {
+      font-weight: bold;
+    }
+
     img {
       width: 90%;
     }
@@ -35,6 +41,9 @@ section {
       text-decoration: none;
       text-align: center;
       cursor: pointer;
+      width: 100%;
+
+      margin-top: 10px;
     }
 
     .bouton:hover {
@@ -47,4 +56,30 @@ section {
     }
   }
 
+}
+
+
+// MEDIA QUERIES
+
+@media screen and (min-width: 1024px) {
+
+  .article-detail {
+
+    flex-direction: row !important;
+    align-items: stretch !important;
+    justify-content: space-between !important;
+
+    max-width: 800px !important;
+
+    .details {
+      flex-basis: 45% !important;
+    }
+
+    img {
+      width: 364px !important;
+      height: 463px !important;
+      object-fit: fill !important;
+    }
+
+  }
 }
