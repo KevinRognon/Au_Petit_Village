@@ -9,8 +9,8 @@
 
     <div class="conteneur-items">
 
-      <div class="card-item" *ngFor="let item, let id of panier">
-        <img (click)="supprimerProduitPanier(id)" class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
+      <div class="card-item" *ngFor="let item of panier">
+        <img (click)="supprimerProduitPanier(item.id)" class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
         <img src={{item.product_img}} alt={{item.product_name}}>
         <div class="infos-produit">
           <p><span class="gras">{{item.product_name}}</span></p>
@@ -21,13 +21,11 @@
         </div>
       </div>
 
-    </div>
-
-    <div class="infos-paiement">
-      <div>
+      <div class="infos-paiement">
         <p><span class="gras">Total: </span>{{somme}}€</p>
       </div>
     </div>
+
 
   </article>
 

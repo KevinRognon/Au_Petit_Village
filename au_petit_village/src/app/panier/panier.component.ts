@@ -35,8 +35,9 @@ export class PanierComponent implements OnInit, OnChanges{
     if(this.panier) {
       this.panierOk = true;
     }
-    else {
+    else if (this.panier.length === 0){
       this.panier = false;
+
     }
 
     switch (this.panierOk) {

@@ -17,11 +17,15 @@ export class PanierService {
     this.setStorageItem()
   }
 
-  supprimerProduitPanier(produit:number) {
-    const id_produit = this.productService.dataProducts.findIndex(item => item.id === produit);
-    this.items.splice(id_produit, 1);
 
+  supprimerProduitPanier(produit:any) {
+    let id_produit = this.items.findIndex((item: { id: number }) => item.id === produit);
+    if (id_produit !== -1) {
+      this.items.splice(id_produit, 1);
+    }
     this.setStorageItem()
+    console.log(id_produit)
+
   }
   setStorageItem () {
     const produitsPanier = JSON.stringify(this.items);
