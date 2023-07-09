@@ -41,6 +41,11 @@
     flex-direction: column;
 
 
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     .croix {
       width: 20px;
     }
@@ -48,7 +53,7 @@
     img {
       width: 25px;
     }
-    div {
+    .text-nav {
       z-index: 5000;
       display: flex;
       flex-direction: column;
@@ -129,9 +134,7 @@ footer {
 
   .header-main {
     height: 6rem !important;
-    .menu div {
-      gap: 2rem;
-      top: 6rem;
+    .menu {
     }
     .header-logo {
       a img {
@@ -141,7 +144,7 @@ footer {
         font-size: 1.5em;
       }
     }
-    div {
+    .text-nav {
       h1 {
         font-size: 1.4em;
       }

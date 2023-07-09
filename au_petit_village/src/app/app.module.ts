@@ -11,6 +11,7 @@ import { PrixcroissantPipe } from './prixcroissant.pipe';
 import { PrixdecroissantPipe } from './prixdecroissant.pipe';
 import { TriProduitsPipe } from './tri-produits.pipe';
 import { AproposComponent } from './apropos/apropos.component';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AproposComponent } from './apropos/apropos.component';
     PrixcroissantPipe,
     PrixdecroissantPipe,
     TriProduitsPipe,
-    AproposComponent
+    AproposComponent,
+    PanierComponent
   ],
     imports: [
         BrowserModule,
