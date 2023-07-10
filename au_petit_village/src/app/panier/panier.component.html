@@ -12,8 +12,7 @@
         <h2>Votre panier</h2>
       </div>
 
-<!--      <ng-container ngIf="panierService.nbItems !== 0">-->
-
+    <div *ngIf="panierService.nbItems > 0">
         <div class="card-item" *ngFor="let item of panier">
 
           <img (click)="supprimerProduitPanier(item.id)" class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
@@ -28,8 +27,16 @@
           </div>
 
         </div>
+    </div>
 
-<!--      </ng-container>-->
+<!--      Affichage du texte "Panier vide"-->
+        <article *ngIf="panierService.nbItems === 0">
+          <div>
+            <h1>Panier vide</h1>
+          </div>
+        </article>
+<!--==============================================================-->
+
       <div class="infos-paiement">
         <p><span class="gras">Total: </span>{{somme}}€</p>
         <div class="bouton-panier">
@@ -42,10 +49,6 @@
 
   </article>
 
-<!--  <article *ngIf="panierService.nbItems === 0">-->
-<!--    <div>-->
-<!--      <h1>Panier vide</h1>-->
-<!--    </div>-->
-<!--  </article>-->
+
 
 </section>

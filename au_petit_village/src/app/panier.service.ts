@@ -40,8 +40,5 @@ export class PanierService implements OnInit{
     localStorage.setItem('Panier', produitsPanier);
   }
 
-  supprimerTotalitePanier() {
-    this.items.splice(0, this.items.length);
-    this.updateNbItems()
-  }
+
 }

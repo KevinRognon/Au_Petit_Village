@@ -6,7 +6,7 @@ import { PanierService } from "../panier.service";
   templateUrl: './panier.component.html',
   styleUrls: ['./panier.component.scss']
 })
-export class PanierComponent implements OnInit, OnChanges{
+export class PanierComponent implements OnInit{
   public panier : any;
   public panierOk : any;
   public msgPanierVide : string;
@@ -24,9 +24,6 @@ export class PanierComponent implements OnInit, OnChanges{
   }
 
 
-  ngOnChanges(changes: SimpleChanges) {
-    this.loadPanier();
-  }
 
   loadPanier() {
 
@@ -35,8 +32,8 @@ export class PanierComponent implements OnInit, OnChanges{
     if(this.panier) {
       this.panierOk = true;
     }
-    else if (this.panier.length === 0){
-      this.panier = false;
+    else if (this.panier === null){
+      this.panierOk = false;
       this.somme = 0;
 
     }
@@ -63,7 +60,14 @@ export class PanierComponent implements OnInit, OnChanges{
   }
 
   supprimerTotalite() {
-    this.panierService.supprimerTotalitePanier();
-    this.ngOnInit();
+    while (this.panierService.items.length > 0) {
+      this.panierService.items = this.panierService.items.pop();
+    }
+    localStorage.removeItem('Panier');
+    this.panier = this.panierService.items;
+    this.somme = 0;
+
+    this.panierService.updateNbItems();
+    this.loadPanier();
   }
 }
