@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Injectable, OnInit} from '@angular/core';
+import { Injectable, OnInit} from '@angular/core';
 import { ProductsService } from "./products.service";
 
 @Injectable({
@@ -38,6 +38,12 @@ export class PanierService implements OnInit{
   setStorageItem () {
     const produitsPanier = JSON.stringify(this.items);
     localStorage.setItem('Panier', produitsPanier);
+  }
 
+  supprimerTotalitePanier() {
+    while (this.items.length > 0) {
+      this.items.pop();
+    }
+    this.updateNbItems()
   }
 }

@@ -30,7 +30,7 @@ import { PanierComponent } from './panier/panier.component';
         AppRoutingModule,
         FormsModule
     ],
-  providers: [PanierComponent],
+  providers: [PanierComponent, ProductDetailComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

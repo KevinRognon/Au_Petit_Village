@@ -87,8 +87,16 @@
     gap: 3rem;
 
     .lien-produit {
-      text-decoration: none;
-      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      text-align: left;
+
+      img {
+        align-self: center;
+      }
+
     }
   }
   .produit {
@@ -106,6 +114,15 @@
     img {
       width: 150px;
       height: 150px;
+    }
+
+    .conteneur-bouton {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        padding: 5px 0;
+      }
     }
   }
 }

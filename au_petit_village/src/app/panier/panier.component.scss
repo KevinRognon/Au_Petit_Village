@@ -9,7 +9,17 @@
   .article-panier {
     background-color: white;
     width: 90%;
-    height: 90%;
+    max-height: 90%;
+
+    .titre-panier {
+      position: sticky;
+      top:0;
+      left: 0;
+      padding: 15px;
+      background-color: #151217;
+      border-bottom: 2px solid #DA001E;
+      color: white;
+    }
 
     .conteneur-items {
       display: flex;
@@ -21,9 +31,25 @@
       position: relative;
 
       .infos-paiement {
-        position: absolute;
+        position: sticky;
         bottom: 0;
         left: 0;
+        background-color: #151217;
+        border-top: 2px solid #DA001E;
+        color: white;
+        p {
+          padding: 10px;
+        }
+        .gras {
+          font-weight: bold;
+        }
+
+        .bouton-panier {
+          display: flex;
+          button:first-child {
+            padding: 10px 10px;
+          }
+        }
       }
       .card-item {
         display: flex;
@@ -53,15 +79,6 @@
         img {
           width: 30px;
         }
-      }
-    }
-
-    .infos-paiement {
-      p {
-        padding: 10px;
-      }
-      .gras {
-        font-weight: bold;
       }
     }
   }

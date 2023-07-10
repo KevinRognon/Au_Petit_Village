@@ -37,6 +37,7 @@ export class PanierComponent implements OnInit, OnChanges{
     }
     else if (this.panier.length === 0){
       this.panier = false;
+      this.somme = 0;
 
     }
 
@@ -58,6 +59,11 @@ export class PanierComponent implements OnInit, OnChanges{
 
   supprimerProduitPanier(product_id:any) {
     this.panierService.supprimerProduitPanier(product_id);
+    this.ngOnInit();
+  }
+
+  supprimerTotalite() {
+    this.panierService.supprimerTotalitePanier();
     this.ngOnInit();
   }
 }

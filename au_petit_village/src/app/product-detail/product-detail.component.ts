@@ -27,4 +27,8 @@ export class ProductDetailComponent implements OnInit{
     const product : number = Number(this.route.snapshot.paramMap.get('id'));
     this.panierService.ajouterProduitAuPanier(product);
   }
+  ajouterProduitAuPanierHomePage(product_id: number) {
+
+    this.panierService.ajouterProduitAuPanier(product_id);
+  }
 }
