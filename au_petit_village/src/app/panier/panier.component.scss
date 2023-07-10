@@ -1,0 +1,85 @@
+
+
+.section-panier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+
+  .article-panier {
+    background-color: white;
+    width: 90%;
+    max-height: 90%;
+
+    .titre-panier {
+      position: sticky;
+      top:0;
+      left: 0;
+      padding: 15px;
+      background-color: #151217;
+      border-bottom: 2px solid #DA001E;
+      color: white;
+    }
+
+    .conteneur-items {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      overflow-y: scroll;
+      height: 100%;
+      position: relative;
+
+      .infos-paiement {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        background-color: #151217;
+        border-top: 2px solid #DA001E;
+        color: white;
+        p {
+          padding: 10px;
+        }
+        .gras {
+          font-weight: bold;
+        }
+
+        .bouton-panier {
+          display: flex;
+          button:first-child {
+            padding: 10px 10px;
+          }
+        }
+      }
+      .card-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+
+        padding: 10px;
+
+        .croix_blanche {
+          background-color: red;;
+          width: 16px;
+          padding: 5px;
+          border-radius: 50%;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+
+
+        .desc_produit {
+          font-size: .8em;
+        }
+
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}

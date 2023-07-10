@@ -33,3 +33,21 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   background-color: black;
 }
+
+.bouton {
+  padding: 10px 20px;
+  background-color: #FDD90B;
+  color: black;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+
+  margin-top: 10px;
+}
+.bouton:hover {
+  background-color: #ffcc00;
+}
+
+

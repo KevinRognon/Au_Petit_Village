@@ -1,0 +1,54 @@
+
+
+
+
+
+<section class="section-panier">
+
+  <article class="article-panier">
+
+    <div class="conteneur-items">
+      <div class="titre-panier">
+        <h2>Votre panier</h2>
+      </div>
+
+    <div *ngIf="panierService.nbItems > 0">
+        <div class="card-item" *ngFor="let item of panier">
+
+          <img (click)="supprimerProduitPanier(item.id)" class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
+          <img src={{item.product_img}} alt={{item.product_name}}>
+          <div class="infos-produit">
+            <p><span class="gras">{{item.product_name}}</span></p>
+            <p><span class="desc_produit">{{item.product_desc}}</span></p>
+          </div>
+
+          <div>
+            <p>{{item.product_price}}€</p>
+          </div>
+
+        </div>
+    </div>
+
+<!--      Affichage du texte "Panier vide"-->
+        <article *ngIf="panierService.nbItems === 0">
+          <div>
+            <h1>Panier vide</h1>
+          </div>
+        </article>
+<!--==============================================================-->
+
+      <div class="infos-paiement">
+        <p><span class="gras">Total: </span>{{somme}}€</p>
+        <div class="bouton-panier">
+          <button class="bouton">Procéder au paiement</button>
+          <button (click)="supprimerTotalite()" class="bouton">Supprimer le panier</button>
+        </div>
+      </div>
+    </div>
+
+
+  </article>
+
+
+
+</section>

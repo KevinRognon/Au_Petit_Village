@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
     .article-propos {
       display: flex;
@@ -57,6 +58,10 @@
 // MEDIA QUERIES
 
 @media screen and (min-width: 1024px){
+
+  .section-propos {
+    height: 80vh !important;
+  }
 
   .article-propos {
     h1 {

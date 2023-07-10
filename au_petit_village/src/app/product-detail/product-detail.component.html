@@ -1,19 +1,21 @@
-<section>
+<section class="section-detail">
 
-  <article>
+  <article class="article-detail">
     <img src={{product.product_img}} alt={{product.product_name}}>
-    <h2>Figurine {{product.product_name}}</h2>
-    <p>Prix : <strong>{{product.product_price}}€</strong></p>
-    <p>Nombre de figurines restantes : {{product.stock}}</p>
-    <p><strong>Description:</strong><br> {{product.product_details}}</p>
-    <div>
-      <p><strong>Caractéristiques techniques: </strong><br></p>
-      <ul>
-        <li><span>Taille du produit:</span> {{product.taille}}</li>
-        <li><span>Matière:</span> {{product.materiaux}}</li>
-      </ul>
+    <div class="details">
+      <h2>Figurine {{product.product_name}}</h2>
+      <p><span>Prix : </span> {{product.product_price}}€</p>
+      <p><span>Nombre de figurines restantes :</span> {{product.stock}}</p>
+      <p><span>Description : </span><br> {{product.product_details}}</p>
+      <div>
+        <ul>
+          <p><span>Caractéristiques techniques : </span></p>
+          <li><span>Taille du produit:</span> {{product.taille}}</li>
+          <li><span>Matière:</span> {{product.materiaux}}</li>
+        </ul>
+      </div>
+      <button class="bouton" (click)="ajouterProduit()" >Ajouter au panier</button>
     </div>
-    <button class="bouton">Acheter</button>
 
   </article>
 

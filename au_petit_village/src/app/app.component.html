@@ -7,11 +7,24 @@
   <h1><a routerLink="/">Au Petit Village</a></h1>
   </div>
   <ul class="menu">
-    <img (click)="activeAnimation()" *ngIf="!isMenuActive" class="menu-hamburger" src="./assets/images/menu-burger.png" alt="menu hamburger">
-    <img (click)="activeAnimation()" *ngIf="isMenuActive" class="menu-hamburger croix" src="./assets/images/croix.png" alt="menu hamburger">
-    <div>
+    <div class="logo-nav">
+
+      <a class="bouton-panier" (click)="activePanierAnimation()" routerLink="/panier"><span class="nb-items-panier" *ngIf="panierService.nbItems !== 0" >{{panierService.nbItems}}</span></a>
+
+      <div>
+        <img (click)="activeAnimation()" class="menu-hamburger" src="./assets/images/menu-burger.png" alt="menu hamburger">
+
+        <img (click)="activeAnimation()" class="croix" src="./assets/images/croix.png" alt="menu hamburger">
+      </div>
+
+
+    </div>
+    <div class="text-nav">
+
       <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)" ><a routerLink="/a-propos">A propos</a></li>
+
       <li (click)="isMenuActive = false" (click)="checkActiveMenu(isMenuActive)"><a routerLink="/contact">Nous contacter</a></li>
+
     </div>
   </ul>
 

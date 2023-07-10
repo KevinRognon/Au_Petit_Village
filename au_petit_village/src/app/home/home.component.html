@@ -38,12 +38,16 @@
     <div class="container-produit">
       <div class="produit" *ngFor="let produit of filteredProduits | triProduits:selectedSortOption">
 
-        <a class="lien-produit" [routerLink]="['/product', produit.id]">
+        <div class="lien-produit">
           <img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}">
           <h3>{{ produit.product_name }}</h3>
           <p>{{produit.product_desc}}</p>
           <p>Prix: <strong>{{produit.product_price}}€</strong></p>
-        </a>
+          <div class="conteneur-bouton">
+            <button class="bouton_detail bouton" (click)="ajouterAuPanier(produit.id)">Ajouter au panier</button>
+            <a [routerLink]="['/product', produit.id]"><button class="bouton_panier bouton">Voir détail</button></a>
+          </div>
+        </div>
 
       </div>
     </div>

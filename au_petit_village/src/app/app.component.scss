@@ -39,16 +39,67 @@
   .menu {
     display: flex;
     flex-direction: column;
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
 
+    .logo-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      div {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        img {
+          position: absolute;
+        }
+      }
+      a {
+        text-decoration: none;
+        background-image: url("../assets/images/panier.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+
+        position: relative;
+
+
+
+        .nb-items-panier {
+          position: absolute;
+          top: 13px;
+          right: -4px;
+          color: black;
+          background-color: white;
+          width: 13px;
+          height: 13px;
+          font-size: .6em;
+          font-weight: bold;
+          text-align: center;
+          border-radius: 50%;
+          line-height: 140%;
+        }
+      }
+
+
+    }
+    .menu-hamburger {
+      width: 18px;
+    }
     .croix {
-      width: 20px;
+      width: 15px;
+      opacity: 0;
     }
 
     img {
       width: 25px;
     }
-    div {
+    .text-nav {
       z-index: 5000;
       display: flex;
       flex-direction: column;
@@ -129,9 +180,21 @@ footer {
 
   .header-main {
     height: 6rem !important;
-    .menu div {
-      gap: 2rem;
-      top: 6rem;
+    .menu {
+      .logo-nav {
+
+
+        a {
+          width: 18px;
+          height: 18px;
+
+          .nb-items-panier {
+            width: 13px;
+            height: 13px;
+            line-height: 150%;
+          }
+        }
+      }
     }
     .header-logo {
       a img {
@@ -141,9 +204,13 @@ footer {
         font-size: 1.5em;
       }
     }
-    div {
+    .text-nav {
       h1 {
         font-size: 1.4em;
+      }
+      li {
+
+        padding: 15px;
       }
       .logo-site {
         width: 50px;
@@ -157,6 +224,24 @@ footer {
 @media screen and (min-width: 1024px) {
   .header-main {
     font-size: 1.5em;
+
+    .menu {
+
+      .logo-nav {
+        a {
+          width: 18px;
+          height: 18px;
+
+          .nb-items-panier {
+            width: 13px;
+            height: 13px;
+            line-height: 130%;
+            font-size: .4em;
+          }
+        }
+
+      }
+    }
 
     .menu div {
       gap: 1rem;
