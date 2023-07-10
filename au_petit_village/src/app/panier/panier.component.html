@@ -5,7 +5,7 @@
 
 <section class="section-panier">
 
-  <article class="article-panier" *ngIf="panierOk">
+  <article class="article-panier" *ngIf="panierService.nbItems !== 0">
 
     <div class="conteneur-items">
 
@@ -32,7 +32,7 @@
 
   </article>
 
-  <article *ngIf="!panierOk">
+  <article *ngIf="panierService.nbItems === 0">
     <div>
       <h1>Panier vide</h1>
     </div>
