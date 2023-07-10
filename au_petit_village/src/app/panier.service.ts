@@ -41,9 +41,7 @@ export class PanierService implements OnInit{
   }
 
   supprimerTotalitePanier() {
-    while (this.items.length > 0) {
-      this.items.pop();
-    }
+    this.items.splice(0, this.items.length);
     this.updateNbItems()
   }
 }
