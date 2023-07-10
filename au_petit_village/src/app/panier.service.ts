@@ -5,7 +5,7 @@ import { ProductsService } from "./products.service";
   providedIn: 'root'
 })
 export class PanierService implements OnInit{
-  items: any = [];
+  items: any[] = [];
   nbItems: number = 0;
   constructor(
     public productService: ProductsService
