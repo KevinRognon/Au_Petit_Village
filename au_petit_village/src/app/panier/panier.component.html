@@ -12,7 +12,7 @@
         <h2>Votre panier</h2>
       </div>
 
-    <div *ngIf="panierService.nbItems > 0">
+    <div *ngIf="panierService.items.length !== 0">
         <div class="card-item" *ngFor="let item of panier">
 
           <img (click)="supprimerProduitPanier(item.id)" class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
@@ -30,8 +30,8 @@
     </div>
 
 <!--      Affichage du texte "Panier vide"-->
-        <article *ngIf="panierService.nbItems === 0">
-          <div>
+        <article class="article-panier-vide" *ngIf="panierService.items.length == 0">
+          <div class="div-panier-vide">
             <h1>Panier vide</h1>
           </div>
         </article>

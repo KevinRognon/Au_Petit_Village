@@ -9,7 +9,7 @@
   <ul class="menu">
     <div class="logo-nav">
 
-      <a class="bouton-panier" (click)="activePanierAnimation()" routerLink="/panier"><span class="nb-items-panier" *ngIf="panierService.nbItems !== 0" >{{panierService.nbItems}}</span></a>
+      <a class="bouton-panier" (click)="activePanierAnimation()" routerLink="/panier"><span class="nb-items-panier">{{panierService.items.length}}</span></a>
 
       <div>
         <img (click)="activeAnimation()" class="menu-hamburger" src="./assets/images/menu-burger.png" alt="menu hamburger">

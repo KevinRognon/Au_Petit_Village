@@ -82,4 +82,18 @@
       }
     }
   }
+
+  .article-panier-vide {
+
+    .div-panier-vide {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        padding: 20px;
+      }
+    }
+  }
 }
