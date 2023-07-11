@@ -12,6 +12,7 @@ import { PrixdecroissantPipe } from './prixdecroissant.pipe';
 import { TriProduitsPipe } from './tri-produits.pipe';
 import { AproposComponent } from './apropos/apropos.component';
 import { PanierComponent } from './panier/panier.component';
+import { MsgAjoutComponent } from './msg-ajout/msg-ajout.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,14 @@ import { PanierComponent } from './panier/panier.component';
     TriProduitsPipe,
     AproposComponent,
     PanierComponent,
+    MsgAjoutComponent,
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule
     ],
-  providers: [PanierComponent, ProductDetailComponent],
+  providers: [PanierComponent, ProductDetailComponent, HomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

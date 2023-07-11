@@ -1,6 +1,6 @@
 <section class="section-home">
-  <span class="msg_ajout">Article ajouté au panier d'achat.</span>
 
+  <app-msg-ajout></app-msg-ajout>
 
   <article class="article-home">
 
@@ -47,7 +47,7 @@
           <p>{{produit.product_desc}}</p>
           <p>Prix: <strong>{{produit.product_price}}€</strong></p>
           <div class="conteneur-bouton">
-            <button class="bouton_detail bouton" (click)="ajouterAuPanier(produit.id)" (click)="afficherMessageAjout()" (click)="afficherMSGajout = !afficherMSGajout">Ajouter au panier</button>
+            <button class="bouton_detail bouton" (click)="ajouterAuPanier(produit.id)" (click)="afficherMSGajout = !afficherMSGajout">Ajouter au panier</button>
             <a [routerLink]="['/product', produit.id]"><button class="bouton_panier bouton">Voir détail</button></a>
           </div>
         </div>

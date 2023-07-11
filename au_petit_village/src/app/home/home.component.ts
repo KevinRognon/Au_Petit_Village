@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { TriProduitsPipe } from '../tri-produits.pipe';
 import { ProductDetailComponent } from "../product-detail/product-detail.component";
+import { PanierService } from '../panier.service';
+import { MsgAjoutComponent } from '../msg-ajout/msg-ajout.component';
 import gsap from "gsap";
 
 @Component({
@@ -19,8 +21,9 @@ export class HomeComponent implements OnInit {
   afficherMSGajout: boolean = false;
 
   constructor(
-    private productsService: ProductsService,
-    private productComp : ProductDetailComponent
+    private productsService  : ProductsService,
+    private productComp      : ProductDetailComponent,
+    private panierServ       : PanierService
   ) {}
 
   filterProduits() {
@@ -43,13 +46,10 @@ export class HomeComponent implements OnInit {
   }
 
   ajouterAuPanier(product_id: number) {
-    this.afficherMessageAjout();
+    this.panierServ.afficherMessageAjout();
     this.productComp.ajouterProduitAuPanierHomePage(product_id);
   }
 
-  afficherMessageAjout() {
-    gsap.fromTo(".msg_ajout", {opacity: 0}, {opacity: 1, duration: .3});
-    gsap.fromTo(".msg_ajout", {opacity: 1}, {opacity: 0, delay: 2});
-  }
+
 
 }

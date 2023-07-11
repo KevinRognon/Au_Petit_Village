@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "../products.service";
 import {ActivatedRoute} from "@angular/router";
-import { PanierService } from "../panier.service";;
+import { PanierService } from "../panier.service";
+import { MsgAjoutComponent } from '../msg-ajout/msg-ajout.component';
 
 @Component({
   selector: 'app-product-detail',
@@ -12,9 +13,9 @@ export class ProductDetailComponent implements OnInit{
   product: any;
 
   constructor(
-    private route: ActivatedRoute,
-    public productService: ProductsService,
-    private panierService: PanierService
+    private route          : ActivatedRoute,
+    public productService  : ProductsService,
+    private panierService  : PanierService,
   ) { }
 
   ngOnInit() {
@@ -30,5 +31,6 @@ export class ProductDetailComponent implements OnInit{
   ajouterProduitAuPanierHomePage(product_id: number) {
 
     this.panierService.ajouterProduitAuPanier(product_id);
+    this.panierService.afficherMessageAjout();
   }
 }
