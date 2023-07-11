@@ -16,7 +16,6 @@ export class PanierService implements OnInit{
   }
 
   affichageAnimationAchat () {
-
   }
 
   ajouterProduitAuPanier(produit:number) {
