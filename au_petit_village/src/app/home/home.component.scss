@@ -70,7 +70,7 @@
       border: none;
       outline: none;
       border-radius: 5px;
-      -webkit-box-shadow: 0 0 2px #bdbdbd;
+      box-shadow: 0 0 2px #bdbdbd;
     }
     select {
       border: none;
@@ -95,7 +95,7 @@
       align-items: stretch;
       text-align: left;
 
-      img {
+      .image_produit{
         align-self: center;
       }
 

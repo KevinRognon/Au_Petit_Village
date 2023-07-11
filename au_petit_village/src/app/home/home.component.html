@@ -42,7 +42,7 @@
       <div class="produit" *ngFor="let produit of filteredProduits | triProduits:selectedSortOption">
 
         <div class="lien-produit">
-          <img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}">
+          <a class="image_produit" [routerLink]="['/product', produit.id]"><img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}"></a>
           <h3>{{ produit.product_name }}</h3>
           <p>{{produit.product_desc}}</p>
           <p>Prix: <strong>{{produit.product_price}}€</strong></p>

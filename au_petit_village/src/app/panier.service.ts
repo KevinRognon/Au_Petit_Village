@@ -15,6 +15,10 @@ export class PanierService implements OnInit{
 
   }
 
+  affichageAnimationAchat () {
+
+  }
+
   ajouterProduitAuPanier(produit:number) {
     const id_produit = this.productService.dataProducts.find(product => product.id === produit);
     this.afficherMessageAjout();
