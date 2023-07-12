@@ -14,7 +14,7 @@
 
             <div class="conteneur-infos">
               <img (click)="supprimerProduitPanier(item.id)" class="croix_blanche" src="./assets/images/croix_blanche.png" alt="croix blanche">
-              <img src={{item.product_img}} alt={{item.product_name}}>
+              <img class="img-item" src={{item.product_img}} alt={{item.product_name}}>
               <div class="infos-produit">
                 <p><span class="gras">{{item.product_name}}</span></p>
                 <p><span class="desc_produit">{{item.product_desc}}</span></p>
