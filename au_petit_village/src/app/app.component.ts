@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
 import {PanierService} from "./panier.service";
-import {delay} from "rxjs";
+import {PanierComponent} from "./panier/panier.component";
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import {delay} from "rxjs";
 export class AppComponent implements OnInit{
 
 
-  constructor(public panierService: PanierService ) {
+  constructor(public panierService: PanierService, public panierComp : PanierComponent ) {
 
   }
 

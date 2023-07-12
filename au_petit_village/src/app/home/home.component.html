@@ -1,7 +1,9 @@
 <section class="section-home">
 
+  <app-msg-ajout></app-msg-ajout>
 
   <article class="article-home">
+
 
     <h1>Notre entreprise</h1>
     <div class="courte-pres-home">
@@ -22,6 +24,7 @@
   </article>
   <article class="article-home">
 
+
     <div class="firstdiv-article-home">
 
       <h2>Nos produits</h2>
@@ -39,12 +42,12 @@
       <div class="produit" *ngFor="let produit of filteredProduits | triProduits:selectedSortOption">
 
         <div class="lien-produit">
-          <img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}">
+          <a class="image_produit" [routerLink]="['/product', produit.id]"><img src={{produit.product_img}} alt="Figurine de {{produit.product_name}}"></a>
           <h3>{{ produit.product_name }}</h3>
           <p>{{produit.product_desc}}</p>
           <p>Prix: <strong>{{produit.product_price}}€</strong></p>
           <div class="conteneur-bouton">
-            <button class="bouton_detail bouton" (click)="ajouterAuPanier(produit.id)">Ajouter au panier</button>
+            <button class="bouton_detail bouton" (click)="ajouterAuPanier(produit.id)" (click)="afficherMSGajout = !afficherMSGajout">Ajouter au panier</button>
             <a [routerLink]="['/product', produit.id]"><button class="bouton_panier bouton">Voir détail</button></a>
           </div>
         </div>

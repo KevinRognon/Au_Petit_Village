@@ -9,31 +9,37 @@
   .article-panier {
     background-color: white;
     width: 90%;
-    max-height: 90%;
+    height: 90vh;
 
-    .titre-panier {
-      position: sticky;
-      top:0;
-      left: 0;
-      padding: 15px;
-      background-color: #151217;
-      border-bottom: 2px solid #DA001E;
-      color: white;
-    }
+    display: flex;
+    flex-direction: column;
+
+
 
     .conteneur-items {
       display: flex;
       flex-direction: column;
       align-items: stretch;
+      justify-content: space-between;
 
-      overflow-y: scroll;
-      height: 100%;
-      position: relative;
+      height: 80vh;
+
+      .conteneur-card {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        height: 100%;
+      }
+
+      .titre-panier {
+
+        padding: 15px;
+        background-color: #151217;
+        border-bottom: 2px solid #DA001E;
+        color: white;
+      }
 
       .infos-paiement {
-        position: sticky;
-        bottom: 0;
-        left: 0;
         background-color: #151217;
         border-top: 2px solid #DA001E;
         color: white;
@@ -55,15 +61,23 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-bottom: 1px solid black;
+        margin-bottom: -1px;
         gap: 5px;
 
         padding: 10px;
+
+        .conteneur-infos {
+          display: flex;
+          align-items: center;
+        }
 
         .croix_blanche {
           background-color: red;;
           width: 16px;
           padding: 5px;
           border-radius: 50%;
+          align-self: flex-start;
 
           &:hover {
             cursor: pointer;
@@ -78,6 +92,74 @@
 
         img {
           width: 30px;
+        }
+      }
+    }
+  }
+
+  .article-panier-vide {
+
+    .div-panier-vide {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+
+// MEDIA QUERIES ================================
+
+@media screen and (min-width: 480px) {
+  .section-panier {
+
+    .article-panier {
+      width: 50%;
+      .conteneur-card {
+
+        .card-item {
+          justify-content: space-between;
+
+          .croix_blanche {
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .section-panier {
+
+    .article-panier {
+      max-width: 60%;
+
+      .conteneur-items {
+
+        .conteneur-card {
+
+          .card-item {
+
+            .conteneur-infos {
+              .img-item {
+                width: 45px;
+              }
+            }
+            .croix_blanche {
+              width: 18px;
+            }
+
+            .infos-produit {
+              font-size: 1.3em;
+            }
+          }
         }
       }
     }

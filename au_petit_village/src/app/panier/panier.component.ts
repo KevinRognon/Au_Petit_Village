@@ -7,7 +7,7 @@ import { PanierService } from "../panier.service";
   styleUrls: ['./panier.component.scss']
 })
 export class PanierComponent implements OnInit{
-  public panier : any;
+  public panier : any = [];
   public panierOk : any;
   public msgPanierVide : string;
   public somme : any = 0;
@@ -23,6 +23,10 @@ export class PanierComponent implements OnInit{
     this.loadPanier();
   }
 
+
+  setSommeFixed() {
+    this.somme = this.somme.toFixed(2);
+  }
 
 
   loadPanier() {
@@ -46,7 +50,7 @@ export class PanierComponent implements OnInit{
         for (let item of this.panier) {
           this.somme += item.product_price
         }
-        this.somme = this.somme.toFixed(2);
+        this.setSommeFixed();
         break;
       case false :
         this.msgPanierVide = "Panier vide."
@@ -60,14 +64,8 @@ export class PanierComponent implements OnInit{
   }
 
   supprimerTotalite() {
-    while (this.panierService.items.length > 0) {
-      this.panierService.items = this.panierService.items.pop();
-    }
-    localStorage.removeItem('Panier');
-    this.panier = this.panierService.items;
+    this.panierService.supprimerTotalitePanier();
     this.somme = 0;
-
-    this.panierService.updateNbItems();
-    this.loadPanier();
+    this.setSommeFixed();
   }
 }
