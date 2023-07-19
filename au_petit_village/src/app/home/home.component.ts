@@ -45,11 +45,11 @@ export class HomeComponent implements OnInit {
     this.filterProduits();
   }
 
+
   ajouterAuPanier(product_id: number) {
     this.panierServ.afficherMessageAjout();
     this.productComp.ajouterProduitAuPanierHomePage(product_id);
   }
-
 
 
 }
