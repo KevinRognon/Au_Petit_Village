@@ -14,3 +14,5 @@ Sur cette application web, vous pourrez : <br>
 - Voir la fiche détail de chaque produit <br>
 
 J'ai volontairement anticipé des fonctionnalités non demandées dans l'énoncé afin de m'exercer.
+
+### Excellente visite
